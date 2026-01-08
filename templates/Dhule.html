@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhule - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <div class="hero" style="background: url('https://www.trodly.com/pictures/destination/x2352.jpg.pagespeed.ic.tXU0-N3rHL.jpg') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Dhule</h1>
+            <p>Explore the Historical and Natural Wonders of Dhule</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+
+    <!-- Attractions in Dhule -->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/9d/60/5e/birds-resting-on-island.jpg?w=900&h=500&s=1" alt="Nandur Madhmeshwar Bird Sanctuary">
+                <h3>Nandur Madhmeshwar Bird Sanctuary</h3>
+                <p>A haven for birdwatchers, this sanctuary is home to various migratory and resident bird species. A must-visit for nature lovers!</p>
+            </div>
+            <div class="card">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/2-shri-saptashrungi-gad-nashik-maharashtra-attr-hero?qlt=82&ts=1726675308277" alt="Shree Saptashrungi Gad">
+                <h3>Shree Saptashrungi Gad</h3>
+                <p>A sacred hill temple dedicated to Goddess Saptashrungi, offering stunning views after a rewarding trek.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/1-panchvati-nashik-maharashtra-attr-hero?qlt=82&ts=1726669901222" alt="Panchavati">
+                <h3>Panchavati</h3>
+                <p>A sacred place with religious significance, believed to be where Lord Ram spent time during his exile. It's rich in history and spiritual ambiance.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="https://www.seawatersports.com/images/places/waghur-dam.png" alt="Waghur Dam">
+                <h3>Waghur Dam</h3>
+                <p>Visit this picturesque dam near the Waghur River, perfect for photography, boating, and relaxing amidst nature.</p>
+            </div>
+            <div class="card">
+                <img src="https://files.yappe.in/place/full/laling-fort-2437609.webp" alt="Laling Fort">
+                <h3>Laling Fort</h3>
+                <p>Discover the historical Laling Fort, offering stunning views and a rich history waiting to be explored.</p>
+            </div>
+        </div>
+    </div>
+    <!-- about section -->
+    <div class="about">
+        <h2>About Nandurbar</h2>
+        <p> Dhule is a vibrant city in northern Maharashtra, known for its rich history, cultural diversity, and growing industrial and agricultural sectors. Serving as the administrative headquarters of the Dhule district, it is an important transit hub on the Mumbai-Northern India route. The city's economy is bolstered by industries like textiles, food processing, and engineering, alongside a strong agricultural base with crops such as cotton, wheat, and sugarcane. With a range of educational institutions and a favorable climate, Dhule is emerging as a key development center in the region.</p>
+    </div>
+    <script>
+        // window.onscroll = function() {scrollFunction()};
+        // function scrollFunction() {
+        //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        //         document.getElementById("navbar").classList.add("scrolled");
+        //     } else {
+        //         document.getElementById("navbar").classList.remove("scrolled");
+        //     }
+        // }
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Dhule';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+    </script>
+</body>
+</html>

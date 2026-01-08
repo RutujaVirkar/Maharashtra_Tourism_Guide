@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latur - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+        <!-- Hero Section ;k-->
+        <div class="hero" style="background: url('https://hblimg.mmtcdn.com/content/hubble/img/ttd_images/mmt/activities/t_ufs/m_Latur_Ausa_fort_1_l_360_640.jpg') no-repeat center center / cover;">
+            <div class="content">
+                <h1>Welcome to Latur.</h1>
+                <p>From historic caves to vibrant markets, Latur has it all for the explorer in you.</p>
+            </div>
+            <div id="weather" class="weather">
+                Loading Weather...
+            </div>
+        </div>
+    <!--attraction-->
+        <div class="attractions">
+            <h2>Must-Visit Attractions</h2>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe3sSXHUTWCXHEi249RCt1quzHxfEEWIMhNg&s" alt="Udgir Temple">
+                    <h3>Udgir Temple</h3>
+                    <p>A historic fort with beautiful archietecture and panoramic views,famous for its role in maratha history.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNWBmU2JD27kHNIommOF9CR1Nto97_s7Ljcg&s" alt="Kharosa Caves">
+                    <h3>Kharosa Caves</h3>
+                    <p>Ancient rock-cut caves featuring beautiful carvings,sculptures,and a peaceful atmosphere.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipOD6g26cHPOFRUBE-ROBdXB5-BaacHvayiwRUif=w675-h390-n-k-no" alt="Shri Siddheshwar Temple">
+                    <h3>Shri Siddheshwar Temple</h3>
+                    <p>A serene temple dedicated to lord shiva,surrouded by a picturesque landscape,a perfect for spiritual seekers.</p>
+                </div>
+                <div class="card">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipO8g-ykGTYmuju35dOa6sVrTTx-oluaYkuclJ3x=w675-h390-n-k-no" alt="Shri Ashtavinayak Mandir">
+                    <h3>Shri Ashtavinayak Mandir</h3>
+                    <p>A temple of divine grace and spiritual harmony.</p>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcGsnMy_tKGCVM0jYdC9z1LD6eU_0i7DpVPA&s" alt="Kava Lake">
+                    <h3>Kava Lake</h3>
+                    <p>A tranquil lake surrounded by greenery,ideal for picnics,birdwatching,and photography.</p>
+                </div>
+                <div class="card">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/47/d7/c8/night-view.jpg?w=1200&h=1200&s=1" alt="Ganj Golai">
+                    <h3>Ganj Golai</h3>
+                    <p>The heart of latur city,famous for its unique radial design and vibrant shopping scene.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <h2>About Latur</h2>
+            <p>
+                Latur, nestled in the Marathwada region of Maharashtra, is a city where history, spirituality, and natural beauty come together in harmony. Famous for its iconic Udgir Fort,and the serene Shri Siddheshwar Temple, Latur offers a glimpse into its rich cultural heritage. The bustling Ganj Golai serves as the vibrant heart of the city, while tranquil spots like Kava Lake provide a peaceful escape into nature. Known for its agricultural prosperity and warm hospitality, Latur is a captivating blend of tradition and modernity, making it a must-visit destination for travelers seeking history, spirituality, and scenic charm.
+            </p>
+        </div>
+
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Latur';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+        
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beed - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- Hero Section ;k-->
+    <div class="hero" style="background: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/d4/83/38/kankaleshwar-temple-beed.jpg?w=500&h=500&s=1') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Beed.</h1>
+            <p>Discover Beed, where ancient forts meet serene temples.</p>
+            </div>
+            <div id="weather" class="weather">
+                Loading Weather...
+            </div>
+        </div>
+    </div>
+<!--attraction-->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQY_dZOhY4jUmcm42F9LxYfSwR8g5y6WjOSWsoAg2d7cFuVqTaU3cmB2WHqahK6HGpfHfWKryOQ94Hj4ymFggt7QEd-WKmCyBziegOPOg" alt="Kankaleshwar Temple">
+                <h3>Kankaleshwar Temple</h3>
+                <p> A prominent Shiva temple known for its beautiful architecture and peaceful ambiance.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/04/96/97/7b/kapil-dhara-kapil-waterfall.jpg" alt="Kapildhara waterfall">
+                <h3>Kapildhara waterfall</h3>
+                <p>A hidden gem offering a serene experience amidst nature</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/61/29/5d/parli-vaijnath-temple.jpg?w=1200&h=1200&s=1" alt="Parli Vaijnath Temple">
+                <h3>Parli Vaijnath Temple</h3>
+                <p>One of the 12 Jyotirlingas, a must-visit for pilgrims and tourists</p>
+            </div>
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipN3F-R0MhVnkit5MMcZhHHmhY2p-am9Aezvf6GQ=s294-w294-h220-k-no" alt="Majalgaon Dam">
+                <h3>Majalgaon Dam</h3>
+                <p>A scenic location offering boating and a quiet escape into nature.</p>
+            </div>
+            <div class="card">
+                <img src="https://3.bp.blogspot.com/-KS6_4cnSbU0/WiDQWW-VJ1I/AAAAAAAAJZA/O6ZMx-mWM0wm38fbs5IaYmyAZmAo67JNwCLcBGAs/s1600/IMG_20170314_110111.jpg" alt="Dharur Fort">
+                <h3>Dharur Fort</h3>
+                <p>Uncover the legacy of Dharur Fort,a treasure of maharashtra's history.</p>
+            </div>
+            <div class="card">
+                <img src="https://thumbs.dreamstime.com/b/khandoba-temple-towering-dipmala-beed-state-maharashtra-india-asia-khandoba-temple-towering-dipmala-beed-242225794.jpg" alt="Khandoba Temple ">
+                <h3>Khandoba Temple</h3>
+                <p>Feel the divine energy at the historic Khandoba Temple.</p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <h2>About Beed</h2>
+        <p>
+            Beed, located in the heart of Maharashtra, is a hidden gem that seamlessly blends history, spirituality, and natural beauty. Known for its majestic forts like Dharur Fort and serene temples such as Kankaleshwar and Parli Vaijnath, the town is a testament to the region's rich cultural heritage. Surrounded by scenic landscapes, Beed offers a tranquil retreat for nature lovers. Its vibrant festivals, ancient architecture, and peaceful ambiance make it a captivating destination for tourists seeking a mix of adventure, history, and spirituality. Beed truly embodies the charm of Maharashtra's diverse culture and natural wonders.
+        </p>
+    </div>
+
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Beed';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+        
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

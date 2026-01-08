@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pune - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero" style="background: url('https://static.india.com/wp-content/uploads/2024/04/Feature-Image-_-pune.jpg?impolicy=Medium_Widthonly&w=400&h=800') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Pune</h1>
+            <p>The Cultural Capital of Maharashtra</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+
+    <!-- Attractions in Pune -->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+          
+            <div class="card">
+                <img src="https://www.trawell.in/admin/images/upload/336491271Pune_Shaniwar_Wada.jpg" alt="Shaniwar Wada">
+                <h3>Shaniwar Wada</h3>
+                <p>A historic fortification and one of Pune's most iconic landmarks.</p>
+            </div>
+            <div class="card">
+                <img src="https://staybloom.com/content/1706785182500-Desktop.jpg" alt="Lal Mahal">
+                <h3>Lal Mahal</h3>
+                <p>A historic palace built by Chhatrapati Shivaji Maharaj in the 17th century.</p>
+            </div>
+           
+            <div class="card">
+                <img src="https://assets.zeezest.com/blogs/PROD_Banner-Dagdusheth-Halwai-Ganpati-this-year_1695881145817.jpg" alt="Dagdusheth Halwai Ganapati Temple">
+                <h3>Dagdusheth Halwai Ganapati Temple</h3>
+                <p>A famous Ganesh temple in Pune, rich in history and devotion.</p>
+            </div>
+          
+            <div class="card">
+                <img src="https://punetourism.co.in/images/places-to-visit/headers/sinhagad-fort-pune-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Sinhagad Fort">
+                <h3>Sinhagad Fort</h3>
+                <p>A scenic hilltop fort with breathtaking views and historical significance.</p>
+            </div>
+            <div class="card">
+                <img src="https://aroundinpune.wordpress.com/wp-content/uploads/2012/03/2642221205_bbf6810a18_z.jpg" alt="Pataleshwar Cave Temple">
+                <h3>Pataleshwar Cave Temple</h3>
+                <p>An ancient rock-cut temple dedicated to Lord Shiva, famous for its architecture.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.gingerhotels.com/resourcefiles/blogsmallimages/aga-khan-palace-pune.jpg" alt="Aga Khan Palace">
+                <h3>Aga Khan Palace</h3>
+                <p>A significant historical site, where Mahatma Gandhi was imprisoned during the freedom struggle.</p>
+            </div>
+            <div class="card">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/vishraambaug-vada-pune-maharashtra-1-attr-hero?qlt=82&ts=1726670155076" alt="Vishrambaug Wada">
+                <h3>Vishrambaug Wada</h3>
+                <p>A historical mansion with rich cultural and architectural value.</p>
+            </div>
+            <div class="card">
+                <img src="https://sceneloc8.com/wp-content/uploads/2024/03/Osho-Ashram-4.png" alt="Osho Ashram">
+                <h3>Osho Ashram</h3>
+                <p>A peaceful meditation retreat attracting seekers from around the world.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Pune -->
+    <div class="about">
+        <h2>About Pune</h2>
+        <p>
+            Pune, known as the cultural capital of Maharashtra, is a vibrant city blending the old and the new. It has a rich history, educational prominence, and scenic beauty. From historical sites like Shaniwar Wada to peaceful hill stations, Pune has a lot to offer to tourists.
+        </p>
+    </div>
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Pune';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+        
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>
+

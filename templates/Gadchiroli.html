@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadchiroli - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+    <div class="logo">MahaExplore</div>
+    <div class="nav-links">
+        <a href="main.html">Home</a>
+        <a href="main.html#section districts">Attractions</a>
+        <a href="main.html#section cuisine">Cuisine</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Districts</button>
+            <div class="dropdown-content">
+                <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Hero Section ;k-->
+    <div class="hero" style="background: url('https://static.toiimg.com/photo/90996114.cms') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Gadchiroli</h1>
+            <p>Explore the Untouched Wilderness and Rich Culture</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+<!--attraction-->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+                     <!-- Card 1 -->
+                     <div class="card">
+                        <img src="https://d14tz9u25kttx3.cloudfront.net/Pranahita_Wildlife_Sanctuary_319ccc99b3.webp" alt="Pranhita Wildlife Sanctuary">
+                        <h3>Pranhita Wildlife Sanctuary</h3>
+                        <p>A peaceful sanctuary at the confluence of the Pranhita and Godavari rivers, perfect for wildlife lovers and nature enthusiasts.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Abujmarh_%28restricted_area_in_chattisgarh%29.jpg" alt="Abujhmar Hills">
+                        <h3>Abujhmar Hills</h3>
+                        <p>Rugged mountain range perfect for trekkers, photographers, and wildlife enthusiasts.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://media1.thrillophilia.com/filestore/rc7lrwyqp5cnt4m7z1r4ax250kgx_-81623_9304.jpg?w=400&dpr=2" alt="Rani Durgavati Mahal">
+                        <h3>Rani Durgavati Mahal</h3>
+                        <p>A historical palace associated with Queen Rani Durgavati, reflecting the grandeur of the region's royal history.</p>
+                    </div>   
+                    <div class="card">
+                        <img src="https://content.jdmagicbox.com/comp/gadchiroli/d2/9999p7132.7132.191121205439.m1d2/catalogue/vairagad-fort-gadchiroli-forts-ptRrCsqP9O.jpg" alt="Sironcha Fort">
+                        <h3>Sironcha Fort</h3>
+                        <p>A fort with historical significance, offering great views of the surrounding landscapes.</p>
+                     </div>
+
+        </div>
+    </div>
+     <!--about mumbai-->
+     <div class="about">
+        <h2>About Gadchiroli</h2>
+        <p>Gadchiroli is a scenic district located in the southeastern part of Maharashtra, India. The district is known for its rich biodiversity, untouched forests, and beautiful landscapes. Surrounded by the majestic Abujhmar hills, Gadchiroli is home to several wildlife sanctuaries, waterfalls, and historical sites. It is also known for its indigenous tribal culture, with many tribal communities residing in the area. The district offers an ideal blend of nature, history, and cultural heritage, making it a hidden gem for travelers looking for an offbeat experience.</p>
+    </div>
+    
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const lat = 19.58; // Latitude for Gadchiroli
+            const lon = 79.93; // Longitude for Gadchiroli
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raigad - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Hero Section ;k-->
+    <div class="hero" style="background: url('https://www.mumbailive.com/images/media/images/raigad_1720421883955jpeg?bg=546030&crop=640%2C359.29824561403507%2C0%2Cnull&fit=crop&fitToScale=w%2C1368%2C768&fm=webp&h=768&height=360&w=1368&width=640') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Raigad</h1>
+            <p>Explore Raigad, where history meets nature with forts, beaches, and lush landscapes.</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+<!--attraction-->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://www.tripnight.com/public/thumbs/monuments/7298/fLR2bBZ0D8OE_468_738.jpg" alt="varsoli beach">
+                <h3>Varsoli beach</h3>
+                <p>Feel the harmony of sea,sun,and the solitude at varsoli beach.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://th.bing.com/th/id/R.fcedd50d84018a795bd57403fd3585fd?rik=k0LkQxNrXYEe5g&riu=http%3a%2f%2fexplorersgroup.in%2fweb%2fwp-content%2fuploads%2f2014%2f06%2fShivtharghal_0004_Layer-3.jpg&ehk=KMgEvhog2mIGtfz%2f6V1SPVjslHoxPoWTAEVbsosyfaI%3d&risl=&pid=ImgRaw&r=0" alt="Shivthar Ghal">
+                <h3>Shivthar Ghal</h3>
+                <p>Step into the mystical cave that inspired maratha greatness.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://cdn2.allevents.in/thumbs/thumb64954ac6c6d7c.jpg" alt="sarasgad fort">
+                <h3>Sarasgad fort</h3>
+                <p>Climb through history to the majestic heights of sarasgad.</p>
+            </div>
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4a/a2/69/kondana-caves.jpg?w=1200&h=-1&s=1" alt="Konada caves">
+                <h3>Konada caves</h3>
+                <p>Ancient carvings,cascading waterfalls,and serene vibes await</p>
+            </div>
+            <div class="card">
+                <img src="https://preview.redd.it/rajgad-fort-maharashtra-india-it-is-one-of-the-oldest-forts-v0-chcppts8ptvc1.jpg?width=640&crop=smart&auto=webp&s=c04fd1a3e6851fd318347e96b249ef57cd14876b" alt="Raigad fort">
+                <h3> Raigad fort</h3>
+                <p>The pride of the maratha empire,perched atop the sahyadri hills. </p>
+            </div>
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/58/6d/28/kihim-beach.jpg?w=800&h=-1&s=1" alt="Kihim Beach">
+                <h3>Kihim Beach</h3>
+                <p>Discover the charm of kihim,where every sunset feels magical. </p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <h2>About Raigad </h2>
+        <p>
+            Raigad Fort, perched at 2,700 feet in the Sahyadri range, is a symbol of Maratha pride and history. Once the capital of Chhatrapati Shivaji Maharaj's empire, it witnessed his coronation in 1674. Known as the "Gibraltar of the East," the fort boasts robust architecture, stunning views, and landmarks like Takmak Tok and Hirakani Buruj. Accessible by a scenic trek or ropeway, it offers a blend of adventure and historical exploration. Raigad stands as a timeless testament to Shivaji Maharaj's vision and valor.
+        </p>
+    </div>
+
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Raigad';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

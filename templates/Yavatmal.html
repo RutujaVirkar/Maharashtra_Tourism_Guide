@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yavatmal MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+     <!-- Hero Section ;k-->
+     <div class="hero" style="background: url('https://teja12.kuikr.com/is/p/t20/1280x800/public/images/gallery/city_masthead/474/Yavatmal_Masthead_1.jpg') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Yavatmal</h1>
+            <p>Explore Yavatmal for its tranquil temples, wildlife, and scenic beauty.</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+<!--attraction-->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNVot8DWk71Bi0M-JCZcqDlzh82Hnjp0W0EdJHX=s1360-w1360-h1020-rw" alt="Tipeshwar Wildlife Sanctuary">
+                <h3>Tipeshwar Wildlife Sanctuary</h3>
+                <p> A lush haven for wildlife enthusiasts, home to tigers, leopards, and diverse flora.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://content3.jdmagicbox.com/comp/yavatmal/q6/9999p7232.7232.221122213306.b7q6/catalogue/arunawati-dam-and-reservoir-yavatmal-tourist-attraction-zOG5ktatAH.jpg" alt="Arunawati Dam and Reservoir">
+                <h3>Arunawati Dam and Reservoir</h3>
+                <p>A serene spot perfect for nature lovers and peaceful escapes.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/places/AAcXr8oVx-fh90WhMvHyHJYdzHdIYL5Kp5TuV5gquWqJQLGN08xU799ezrtU5Ex9xxcSj_D0ktkSyD0wvJ0kpmel5Q1ZAdBv2Liwtlw=s1600-h500" alt="Kalamb Temple">
+                <h3>Kalamb Temple</h3>
+                <p>An ancient Ganesha temple offering spiritual solace in a tranquil setting.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.nativeplanet.com/photos/325x244x100/2019/01/photo-91-145650-1.jpg" alt="Waghadi River">
+                <h3>Waghadi River</h3>
+                <p>A picturesque river ideal for relaxation and scenic views.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.mappls.com/place/38HSRL_1696304208602_1.png" alt="Bembla Dam">
+                <h3>Bembla Dam</h3>
+                <p>A serene dam surrounded by nature, perfect for picnics and quiet retreats.</p>
+            </div>
+            <div class="card">
+                <img src="https://content.jdmagicbox.com/comp/yavatmal/t5/9999p7232.7232.200930230529.t8t5/catalogue/jagat-mandir-yavatmal-ho-yavatmal-temples-5utBW43oNx.jpg" alt="Jagat Mandir">
+                <h3>Jagat Mandir</h3>
+                <p>A beautifully crafted temple with a divine ambiance, attracting pilgrims and tourists alike.</p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <h2>About Yavatmal</h2>
+        <p>
+            Yavatmal, nestled in nature’s lap, offers scenic beauty with places like Tipeshwar Wildlife Sanctuary and Arunawati Dam, alongside spiritual havens like Kalamb Temple and Jagat Mandir, making it an ideal blend of tranquility and adventure.
+        </p>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").classList.add("scrolled");
+            } else {
+                document.getElementById("navbar").classList.remove("scrolled");
+            }
+        }
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Yavatmal';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

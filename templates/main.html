@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore Maharashtra's best tourist spots with our interactive map and detailed guides.">
+    <meta name="keywords" content="Maharashtra, tourism, travel, India, tourist places, interactive map">
+    <meta name="author" content="Rutuja Virkar">
+
+    <!-- Open Graph (for better sharing on social media) -->
+    <meta property="og:title" content="Maharashtra Tourism Guide">
+    <meta property="og:description" content="Find the best tourist attractions in Maharashtra with our interactive guide.">
+    <meta property="og:image" content="https://example.com/preview-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    
+    <title>MahaExplore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            overflow-x: hidden;
+            background-color: black;
+            color: white;
+         }
+        .navbar{
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            position: fixed;
+            z-index: 2;
+            background:black;
+        }
+        .navbar .logo {
+            font-size: 35px;
+            color:white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 5px 10px;
+            border: 2px solid white;
+            border-radius: 20px;
+            text-transform: capitalize;
+            transition: 0.3s ease;
+        }
+        .navbar .nav-links a:hover {
+            color: black;
+            background: white;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+       .dropbtn {
+           background-color:transparent;
+           color:white;
+           padding: 5px 10px;
+           font-size: 16px;
+           border: 2px solid white;
+           cursor: pointer;
+           text-transform: capitalize;
+           border-radius: 20px;
+           transition: 0.3s ease;
+        }
+
+        .dropbtn:hover {
+           background-color: white;
+           color: black;
+        }
+       .dropdown-content {
+           display: none;
+           position: absolute;
+           padding-top: 5px;
+           background-color: transparent;
+           min-width: 160px;
+           z-index: 1;
+           border-radius: 10px;
+           max-height: 150px; 
+           overflow-y: auto; 
+        }         
+        .dropdown-content::-webkit-scrollbar {
+           display: none;  
+        }
+
+        .dropdown-content a {
+           color: black;
+           padding: 20px 12px;
+           text-decoration: none;
+           display: block;
+           text-transform: capitalize;
+           border-bottom: 1px solid #ddd;
+           margin-top: 5px;
+        } 
+
+
+        .dropdown-content a:hover {
+           background-color: #f1f1f1;
+           color: black;
+        }           
+
+        .dropdown:hover .dropdown-content {
+            display:none; 
+        }
+        .banner {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            animation: zoom 10s infinite alternate;
+        }
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+        .content {
+            text-align: center;
+            z-index: 1;
+            animation: fadeIn 2s ease;
+        }
+        .content h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .content a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: 0.3s ease;
+        }
+        .content a:hover {
+            background: white;
+            color: black;
+        }
+        .section {
+            padding: 60px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: #f4d03f; /* Golden accent */
+            animation: fadeIn 1.5s ease-in;
+        }
+        .grid-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: start;
+            gap: 20px;
+            overflow-x:auto;
+            padding-bottom: 20px;
+        }
+        .grid-container::-webkit-scrollbar{
+            display: none;
+        }
+        .card {
+            width: 250px;
+            background:white;
+            border-radius: 10px;
+            overflow: hidden;
+            color: #333;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: slideIn 1.5s ease-in-out;
+            flex-shrink: 0;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 15px 0;
+            font-size: 1.2rem;
+            text-transform:uppercase;
+        }
+        .card p {
+            padding: 0 10px 15px;
+            font-size: 0.9rem;
+            text-align: justify;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .weather {
+            font-size: 0.9rem;
+            margin: 10px;
+            border-radius: 25px ;
+            padding: 10px; 
+            color:black;
+            display: inline-block;
+            background-color: #f0ececf5;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+.popup-img {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-img img {
+            width: 80%;
+            height: auto;
+            max-width: 1000px;
+        }
+        .popup-img .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+                              /* Enhanced Hamburger */
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    z-index: 3;
+    /* transition: transform 0.3s ease; Smooth transition */
+}
+
+.hamburger div {
+    background-color:white;
+    height: 4px;
+    width: 100%;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10px;
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+}
+
+.hamburger:hover {
+    transform: scale(1.1); /* Slight scale on hover for interactivity */
+}
+
+.hamburger:hover div {
+    background-color: #f4d03f; /* Change color on hover */
+}
+
+/* Mobile Menu (For the links) */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+    .navbar .nav-links a,.dropdown button{
+    font-size: 15px; /* Adjust font size */
+    padding: 10px; /* Increase padding for larger box size */
+    border-radius: 10px; /* Optional: Adjust the roundness of the box */
+    text-align: center; /* Center-align the text */
+    width: 100%; /* Optional: Make links stretch full width */
+    display: block; /* Ensure each link takes its own line */
+}
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .dropdown-content {
+        background-color: black;
+        color: white;
+        width:40%;
+        display: flex;
+        justify-content: center;
+        margin-left:30%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div  id="home"class="banner">
+        <img src="https://theanamikapandey.com/wp-content/uploads/2024/08/e88116fb-b982-4d9d-affb-ed03860e0a4a-1024x1024.jpeg "alt="Mumbai"/>
+        <div class="content">
+            <h1>Welcome to Maharashtra</h1>
+            <p>Explore the beauty, history, and culture of Maharashtra.</p>
+            <a href="{{ url_for('district', name='Mumbai') }}">Discover More</a>
+        </div>
+    </div>
+
+    <!-- Top Attractions Section -->
+    <div id="section-districts"  class="section districts">
+        <h2>Top Attractions</h2>
+        <div class="grid-container">
+            <div class="card"data-location="Mumbai">
+                <img src="https://theheritageart.com/wp-content/uploads/2022/11/gateway-of-india.jpeg"alt="Mumbai" />
+                <h3>GATEWAY OF INDIA</h3>
+                <p>The city of dreams with iconic landmarks like Gateway of India.</p>
+                <div class="weather">Fetching weather...</div>
+            </div>
+            <div class="card"data-location="Panchgani">
+                <img src="https://content.r9cdn.net/rimg/dimg/49/89/e0fe2587-city-47025-1695ec59426.jpg?width=1366&height=768&xhint=1877&yhint=1489&crop=true" alt="Panchagni" />
+                <h3>Panchagni</h3>
+                <p>where the hills whisper secrets of nature's grandeur.</p>
+                <div class="weather">Fetching weather...</div>
+            </div>
+            <div class="card"data-location="Lavasa">
+                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSVRIS0Wn9zRliJqnQpr0QiSDipZLX4A3YIDsHcVtRRuiEtLNBIXJQa6l0WrOnZKir7AyUP6f4nvHKFbHFuV2btefUXtOVy7T5aKG1zxA" alt="lavasa" />
+                <h3>Lavasa</h3>
+                <p>where modern luxury meets nature's serenity.</p>
+                <div class="weather">Fetching weather...</div>
+            </div>
+            <div class="card"data-location="Lonavala">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5c/53/fa/caption.jpg?w=500&h=400&s=1"alt=lonavala/>
+                <h3>Lonavala</h3>
+                <p>where waterfalls,hills,and serenity meet.</p>
+                <div class="weather">Fetching weather...</div>
+            </div>
+            <div class="card"data-location="Mahabaleshwar">
+                <img src="https://oneday.travel/wp-content/uploads/one-day-mumbai-to-mahabaleshwar-sightseeing-tour-package-by-car-header.jpg" alt="mahabaleshwar" />
+                <h3>Mahabaleshwar</h3>
+                <p>feel the cool breeze and soak in the lush greenery of mahabaleshwar.</p>
+                <div class="weather">Fetching weather...</div>
+
+            </div>
+            <div class="card"data-location="Mumbai">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/juhu-beach-mumbai-maharashtra-1-musthead-hero?qlt=82&ts=1727355340209" alt="juhu beach" />
+                <h3>Juhu beach</h3>
+                <p>feel the ocean breeze and the rhythm of the waves at Juhu beach.</p>
+                <div class="weather">Fetching weather...</div>
+
+            </div>
+            <div class="card"data-location="Ratnagiri">
+                <img src="https://cdn.iwant2explore.com/gallery/ganpatipule_beach1640687225760.jpg.webp"alt="ganpatipule" />
+                <h3>Ganpatipule</h3>
+                <p>Discover the soul of kokan at the divine shores of Ganpatipule</p> 
+                <div class="weather">Fetching weather...</div>
+
+            </div>
+            <div class="card"data-location="Matheran">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipO3ROS_Zwu1TAFvEfoBeVP_vaAtTSs4LkBl8w7W=w675-h390-n-k-no" alt="Matheran" />
+                <h3>Matheran</h3>
+                <p>Matheran is a tranquil hill station with beautiful views.</p>
+                <div class="weather">Fetching weather...</div>
+
+            </div>
+        </div>
+    </div>
+    <div id="popup" class="popup-img">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img id="popup-img" src="" alt="Enlarged image" />
+    </div>
+
+    <!-- Local Cuisine Section -->
+    <div id="section-cuisine"class="section cuisine">
+        <h2>Local Cuisine</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="https://www.ruchkar.in/cdn/shop/articles/iStock-1141418070.jpg?v=1583487296" alt="Puran Poli" />
+                <h3>Puran Poli</h3>
+                <p>A famous Maharashtrian sweet flatbread stuffed with jaggery and lentils.</p>
+            </div>
+            <div class="card">
+                <img src="https://nativchefs.com/singapore/wp-content/uploads/Zunka-Bhakar.jpeg" alt="Zunka Bhakri" />
+                <h3>Zunka Bhakri</h3>
+                <p>A spicy gram flour dish served with Bhakri, a staple rural meal.</p>
+            </div>
+            <div class="card">
+                <img src="https://shwetainthekitchen.com/wp-content/uploads/2020/04/IMG_8272-scaled.jpg" alt="Kothimbir Vadi" />
+                <h3>Kothimbir Vadi</h3>
+                <p>A crispy, savory snack made from coriander leaves, gram flour, and spices.</p>
+            </div>
+            <div class="card">
+                <img src="https://pipingpotcurry.com/wp-content/uploads/2019/04/Misal-Pav-Instant-Pot-1.jpg" alt="Misal Pav" />
+                <h3>Misal Pav</h3>
+                <p>A spicy curry made of sprouted moth beans, served with pav and farsan.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.ohmyveg.co.uk/wp-content/uploads/2021/01/sabudana-khichdi-e1722865389647.jpg" alt="Sabudana Khichdi" />
+                <h3>Sabudana Khichdi</h3>
+                <p>A light and flavorful dish made with tapioca pearls, peanuts, and potatoes, often eaten during fasting.</p>
+            </div>
+            <div class="card">
+                <img src="https://opendrinks.io/img/solkadhi.8c677211.jpg" alt="Sol Kadhi" />
+                <h3>Sol Kadhi</h3>
+                <p>A refreshing drink made with coconut milk and kokum, served as a digestive.</p>
+            </div>
+            <div class="card">
+                <img src="https://c.ndtvimg.com/2023-09/irpk59vg_peanut-jam-modak_625x300_14_September_23.jpg" alt="Modak" />
+                <h3>Modak</h3>
+                <p>A sweet dumpling filled with jaggery and coconut, a favorite of Lord Ganesha.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.jiomart.com/images/product/original/rv37f4krsf/siddhakala-thalipith-bhajni-200-product-images-orv37f4krsf-p593464767-4-202208270231.jpg?im=Resize=(1000,1000)" alt="Thalipeeth" />
+                <h3>Thalipeeth</h3>
+                <p>A multigrain savory flatbread, typically served with butter or yogurt.</p>
+            </div>
+            <div class="card">
+                <img src="https://i.ytimg.com/vi/9rEYpTuV_4U/maxresdefault.jpg" alt="Pithla Bhakri" />
+                <h3>Pithla Bhakri</h3>
+                <p>A rural staple made of gram flour curry (pithla) served with jowar bhakri.</p>
+            </div>
+            <div class="card">
+                <img src="https://shwetainthekitchen.com/wp-content/uploads/2022/07/Pav-bhaji.jpg" alt="Pav Bhaji" />
+                <h3>Pav Bhaji</h3>
+                <p>A popular street food of Mumbai, consisting of mashed spicy vegetables served with buttered pav.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/09/kolhapuri-chicken-recipe.jpg" alt="Kolhapuri Chicken" />
+                <h3>Kolhapuri Chicken</h3>
+                <p>A fiery, spicy chicken curry from Kolhapur, known for its bold flavors.</p>
+            </div>
+        </div>
+    </div>
+    <footer style="background-color: #333; color: #fff; padding: 20px 0; text-align: center;">
+                <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+                  <!-- Footer Content -->
+                  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                    <!-- About Section -->
+                    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                      <h3 style="margin-bottom: 10px;">About MahaExplore</h3>
+                      <p style="font-size: 14px; line-height: 1.6;">Explore the beauty, culture, and traditions of Maharashtra through our guide.</p>
+                    </div>
+              
+                    <!-- Quick Links -->
+                    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                      <h3 style="margin-bottom: 10px;">Quick Links</h3>
+                      <ul style="list-style: none; padding: 0; font-size: 14px; line-height: 1.6;">
+                        <li><a href="#home" style="color: #fff; text-decoration: none;">Home</a></li>
+                        <li><a href="#section-districts" style="color: #fff; text-decoration: none;">Attractions</a></li>
+                        <li><a href="#section-cuisine" style="color: #fff; text-decoration: none;">Cuisine</a></li>
+                        <li><a href="Contact.html" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+                      </ul>
+                    </div>
+              
+                    <!-- Social Media -->
+                    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                      <h3 style="margin-bottom: 10px;">Follow Us</h3>
+                      <div>
+                        <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank" style="color: #fff; text-decoration: none;"">
+                            <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://wa.me/918169717193" style="color: #fff; text-decoration: none" target="_blank" >
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Copyright -->
+                  <p style="font-size: 12px; margin-top: 20px;">© 2025 Maharashtra Tourism. All rights reserved.</p>
+                </div>
+              </footer>
+
+
+<script>
+     const images = document.querySelectorAll('.card img');
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                const src = img.src;
+                document.getElementById('popup-img').src = src;
+                document.getElementById('popup').style.display = 'flex';
+            });
+        });
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+              // Define district URLs
+const districts = {
+    ahamednagar:"Ahamednagar.html",
+    aurangabad:"Auragabad.html",
+    Bhandara:"Bhandara.html",
+    Dhule:"Dhule.html",
+    gadchiroli:"Gadchiroli.html",
+    gondia:"Gondia.html",
+    kolhapur:"Kolhapur.html",
+    nandurbar:"Nandurbar.html",
+    sangli:"Sangli.html",
+    pune: "Pune.html",
+    mumbai: "Mumbai.html",
+    nashik: "Nashik.html",
+    Nagpur: "Nagpur.html",
+    Aurangabad: "Aurangabad.html",
+    Palghar:"Palghar.html",
+    Sindhudurga:"Sindhudurga.html",
+    Solapur:"Solapur.html",
+    Thane:"Thane.html",
+    Warda:"Wardha.html",
+   
+};
+
+document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            
+            // Optional: Close dropdown when clicking outside
+            window.addEventListener('click', function(e) {
+                if (!event.target.matches('.dropbtn') && !event.target.matches('.dropdown-content') && !event.target.matches('.dropdown-content a')) {
+                    dropdownContent.style.display = 'none';
+                }
+            });
+        });
+        const apiKey = "8f833e2f0044bcd69b9bf91641915165";
+
+        // Function to fetch weather data
+        async function fetchWeather(location) {
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                if (data.main) {
+                    return {
+                        temperature: data.main.temp,
+                        description: data.weather[0].description,
+                    };
+                } else {
+                    return { error: "Location not found" };
+                }
+            } catch (error) {
+                console.error("Error fetching weather data:", error);
+                return { error: "Unable to fetch weather" };
+            }
+        }
+
+        // Function to update weather for each card
+        async function updateWeather() {
+            const cards = document.querySelectorAll(".card");
+            for (const card of cards) {
+                const location = card.getAttribute("data-location");
+                const weatherDiv = card.querySelector(".weather");
+                const weather = await fetchWeather(location);
+
+                if (weather.error) {
+                    weatherDiv.textContent = weather.error;
+                } else {
+                    weatherDiv.textContent =` ${weather.temperature}°C, ${weather.description}`;
+                }
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+        // Call the updateWeather function when the page loads
+        document.addEventListener("DOMContentLoaded", updateWeather);
+
+
+</script>
+</body>
+</html>
+

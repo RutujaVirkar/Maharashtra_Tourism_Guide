@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagpur - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <div class="hero" style="background: url('https://nagpurtourism.co.in/images/places-to-visit/header/deeksha-bhoomi-nagpur-tourism-entry-fee-timings-holidays-reviews-header.jpg') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Nagpur</h1>
+            <p>Explore the Orange City of India</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+
+    <!-- Attractions in Pune -->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+          
+            <div class="card">
+                <img src="https://nagpurtourism.co.in/images/places-to-visit/header/deeksha-bhoomi-nagpur-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt="Deekshabhoomi">
+                <h3>Deekshabhoomi</h3>
+                <p>Deekshabhoomi is a significant religious monument where Dr. B.R. Ambedkar embraced Buddhism. It is a symbol of the Dalit Buddhist movement.</p>
+            </div>
+            <div class="card">
+                <img src="https://nagpurtourism.co.in/images//tourist-places/dragon-palace-buddhist-temple-nagpur/dragon-palace-buddhist-temple-nagpur-india-tourism-photo-gallery.jpg" alt="Deekshabhoomi">
+                <h3>Dragon Palace Temple</h3>
+                <p>A Buddhist temple that blends Chinese and Japanese architecture. It is a peaceful place to meditate and enjoy the serenity of the surroundings.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.turiya.co/360/CentralMuseumNagpur/gallery/img_01.jpg" alt="Nagpur Central Museum">
+                <h3>Nagpur Central Museum</h3>
+                <p>The Nagpur Central Museum showcases a vast collection of artifacts, sculptures, and historical exhibits.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.thehitavada.com/Encyc/2021/9/26/2_02_09_56_Maharajbagh-zoo_1_H@@IGHT_332_W@@IDTH_525.jpg" alt="Maharaj Baug and Zoo">
+                <h3>Maharaj Baug and Zoo</h3>
+                <p>This historical garden and zoo is a great place for nature lovers and families.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.tripnight.com/public/uploads/monuments/7207/CQTdHDSlFyEU.jpg" alt="Maharaj Baug and Zoo">
+                <h3>Sitabuldi Fort </h3>
+                <p>Sitabuldi Fort is a historical fort that stands on a hill in the center of the city. It is significant for its role during the British era and offers views of the city.</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="about">
+        <h2>About Nagpur</h2>
+        <p>
+            Nagpur, known as the "Orange City" of India, is renowned for its trade in oranges, as well as its rich cultural heritage. It is the second capital of Maharashtra and is well connected by air, rail, and road. The city is a blend of ancient history and modern development. From religious sites like Deekshabhoomi to the serene Futala Lake, Nagpur offers an array of experiences for visitors.
+        </p>
+    </div>
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Nagpur';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+        
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solapur - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <div class="hero" style="background: url('https://maharashtratourism.gov.in/wp-content/uploads/2023/11/bhuikot-fort.jpg') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Solapur</h1>
+            <p>Explore the Spiritual and Historical Heart of Maharashtra</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+
+
+    <!-- Attractions in Pune -->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://i.ytimg.com/vi/y_z-GWdI5WA/hqdefault.jpg" alt="Solapur Fort">
+                <h3>Solapur Fort</h3>
+                <p>A historic fort known for its impressive architecture and its connection to Maratha history.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://www.tirthayatra.org/wp-content/uploads/2022/01/Pandharpur_Gallery3.jpg" alt="Pandharpur">
+                <h3>Pandharpur</h3>
+                <p>A major pilgrimage town, famous for the Vitthal Rukmini Temple, one of the most revered temples in Maharashtra.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/6e/28/5c/6e285cd8b8f10c9c6feabfa8e8dade77.jpg" alt="Bhuikot Fort">
+                <h3>Bhuikot Fort</h3>
+                <p>A 16th-century fort offering stunning views of the city and holding historical significance.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="https://cdn.downtoearth.org.in/dte/userfiles/images/38_31072011.jpg" alt="Nannaj Bird Sanctuary">
+                <h3>Nannaj Bird Sanctuary</h3>
+                <p>A paradise for birdwatchers, the sanctuary is home to numerous migratory bird species.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="https://punetourism.co.in/images//v2/tourist-places/shri-swami-samarth-temple-pune/shri-swami-samarth-temple-pune-photo-gallery-pune-tourism-cr-sharan-adventurer-and-explorer.jpg" alt="Akkalkot Swaminarayan Temple">
+                <h3>Akkalkot Swaminarayan Temple</h3>
+                <p>A prominent temple dedicated to Swaminarayan, located in Akkalkot near Solapur.</p>
+            </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="https://discoverindiabycar.com/wp-content/uploads/2024/03/Guide-to-visit-siddheshwar-temple-in-Solapur-03.jpg" alt="Siddheshwar Temple">
+                <h3>Siddheshwar Temple</h3>
+                <p>A peaceful temple dedicated to Lord Shiva, located near Siddheshwar Lake.</p>
+            </div>
+            <div class="card">
+                <img src="https://d3pc1xvrcw35tl.cloudfront.net/images/1200x900/ujani-dam-5-nm_2024081279909.jpg" alt="Ujani Dam">
+                <h3>Ujani Dam</h3>
+                <p>A major reservoir offering stunning views and recreational activities like boating and fishing.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <h2>About Solapur</h2>
+        <p>
+            Solapur, located in the southern part of Maharashtra, is a city with rich cultural, religious, and historical significance. Known for its historic forts, temples, and natural beauty, Solapur attracts tourists who seek both spiritual and historical experiences. The region is famous for its textiles, especially Solapur chaddars (blankets), and is a key player in the state's agricultural sector.
+        </p>
+    </div>   
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Solapur';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+        
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

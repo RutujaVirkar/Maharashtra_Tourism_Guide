@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolhapur- MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero" style="background: url('https://www.holidify.com/images/cmsuploads/compressed/798px-Kolhapur_New_Palace_20190704134939.jpg') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Kolhapur</h1>
+            <p>Explore the Cultural Heritage of Kolhapur</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+
+    <!-- Attractions in Pune -->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://www.inditales.com/wp-content/uploads/2019/06/mahalakshmi-temple-kolhapur.jpg" alt="Mahalakshmi Temple">
+                <h3>Mahalakshmi Temple</h3>
+                <p>A famous temple dedicated to Goddess Mahalakshmi, attracting devotees from all over India.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/attr_1125_20191224160810.jpg" alt="Panhala Fort">
+                <h3>Panhala Fort</h3>
+                <p>Historic fort with scenic views and a rich history, known for its strategic location on Panhala Hill.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/bf/de/72/rankala-lake.jpg?w=1200&h=1200&s=1" alt="Rankala Lake">
+                <h3>Rankala Lake</h3>
+                <p>A serene and peaceful lake offering boating opportunities and picturesque views of the surroundings.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="https://etimg.etb2bimg.com/photo/102108031.cms" alt="Shivaji University">
+                <h3>Shivaji University</h3>
+                <p>A prominent educational institution with a beautiful campus surrounded by lush greenery.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="https://media1.thrillophilia.com/filestore/0j7yyanesl7e43v2lw4bhqozjab8_1573900996_New_Palace__Kolhapur__Maharashtra__India.jpg" alt="New Palace (Raja's Palace)">
+                <h3>New Palace (Raja's Palace)</h3>
+                <p>A magnificent royal palace now turned into a museum showcasing the region’s royal history.</p>
+            </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/kopeshwar-temple-kolhapur-maharashtra-2-attr-hero?qlt=82&ts=1726668804923" alt="Kopeshwar Temple">
+                <h3>Kopeshwar Temple</h3>
+                <p>An ancient Shiva temple with intricate carvings, reflecting the architectural brilliance of the time.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <h2>About Kolhapur</h2>
+        <p>
+            Kolhapur, located in the southern part of Maharashtra, is a city steeped in cultural heritage and history. It is famous for its temples, forts, and beautiful lakes. The city has been a historical center of Maratha culture and politics, and it remains an important destination for religious and historical tourism. Kolhapur is also known for its unique handicrafts, especially Kolhapuri chappals, and its delicious cuisine.
+        </p>
+    </div>
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Ahmednagar';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+        
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

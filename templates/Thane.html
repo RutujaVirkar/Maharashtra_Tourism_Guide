@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thane- MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <div class="hero" style="background: url('https://www.piramalvaikunth.com/wp-content/uploads/2023/08/Best-Places-To-Visit-In-Thane-In-Monsoon.jpg') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Thane</h1>
+            <p>Discover the Hidden Gems of Thane District</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+
+    <!-- Attractions in Pune -->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+          
+            <div class="card">
+                <img src="https://content.jdmagicbox.com/thane/p9/022pxx22.xx22.141218102531.a6p9/catalogue/upvan-lake-jk-gram-thane-west-thane-tourist-attraction-sedj2.png" alt="Upvan Lake">
+                <h3>Upvan Lake</h3>
+                <p>Beautiful lake surrounded by hills and perfect for a peaceful evening walk.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-CIpJpBZsByJtCIlskIq_SlyWMMxWUYQIyQ&s" alt="Masunda Lake">
+                <h3>Masunda Lake</h3>
+                <p>A serene lake with boating facilities and a lovely promenade for relaxation.</p>
+            </div>
+            <!-- Card 3 -->
+           
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipM6JzYYlFQK7M5Bp6l5f5Nep27lvK4k8i8_k1--=s1360-w1360-h1020-rw" alt="Yeoor Hills">
+                <h3>Yeoor Hills</h3>
+                <p>A beautiful hilly region, ideal for nature walks and outdoor activities.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="https://content.jdmagicbox.com/v2/comp/mumbai/c4/022pxx22.xx22.141218114054.d2c4/catalogue/karnala-fort-panvel-navi-mumbai-tourist-attraction-39h91bdxm6.jpg" alt="Kalwa Fort">
+                <h3>Kalwa Fort</h3>
+                <p>A historic fort offering stunning views of the surrounding landscapes.</p>
+            </div>
+            <div class="card">
+                <img src=" https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/91/1c/f9/tikuji-ni-wadi.jpg?w=1200&h=-1&s=1" alt="Tikuji-ni-Wadi">
+                <h3>Tikuji-ni-Wadi</h3>
+                <p>An amusement park with water rides, a toy train, and a mini zoo.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.piramalvaikunth.com/wp-content/uploads/2024/02/Thane-Grand-Central-Park-Namo-Grand-Central-Park.png" alt="Central Park">
+                <h3>Central Park</h3>
+                <p>A large, well-maintained park with lush greenery, walking paths, and recreational areas, perfect for a peaceful escape.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Pune -->
+    <div class="about">
+        <h2>About Thane</h2>
+        <p>
+            Thane, located in the Mumbai Metropolitan Region, is known for its scenic lakes, beautiful gardens, and rich historical landmarks. The city is often referred to as the "City of Lakes" due to its many lakes, such as Upvan Lake and Masunda Lake. With historical forts, temples, and lush greenery, Thane offers a perfect blend of urban and rural experiences.
+        </p>
+    </div>
+
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Thane';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

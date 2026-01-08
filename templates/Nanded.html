@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanded - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Hero Section ;k-->
+    <div class="hero" style="background: url('https://paramountclientweb.s3.ap-south-1.amazonaws.com/indian-holiday-trip/City/2023/Apr/Img_7273_202314191410_Nanded.jpg') no-repeat center center / cover;">
+
+        <div class="content">
+            <h1>Welcome to Nanded</h1>
+            <p>Uncover Nanded, a city steeped in divine history and tranquil landscapes.</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+<!--attraction-->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTuxphbWyFyU7rorb8q8SQlulIBSyv5Ip65jzZ5-tJ4jqYLgXXhEW9LNyFEJhIaBx3Z9mm4xMwYKAKoh1tQdXaZM_4YTHqExXe45NtulA" alt="Takhat Sachkhand Sri Hazur Sahib">
+                <h3>Takhat Sachkhand Sri Hazur Sahib</h3>
+                <p>A divine shrine steeped in Sikh history and spirituality.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMSm2UwLgI3RvC1PBrw8ZuC7Em5eYvOz0nNWA3Yv-UGZSCKd9Ml_asrqO_sc8J5J5E-dSXwd88-YZ9qZKLHM_nGaQIGQ12nJoUUgKExY9FDCByTcNwZhyg803Di15cQZmGFjaWdZgOCbw/s1600/IMG_20170313_130148.jpg" alt="Kandhar Fort">
+                <h3>Kandhar Fort</h3>
+                <p>An ancient fort offering panoramic views and rich history.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://thetempleguru.com/wp-content/uploads/2024/04/Kaleshwar-temple-nanded-10.jpg" alt="Kaleshwar Temple">
+                <h3>Kaleshwar Temple</h3>
+                <p>A peaceful temple dedicated to Lord Shiva, radiating calm and devotion.</p>
+            </div>
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNkLwukw9StIyZfdAN1GY47_F0DzGXxmdCr1Slg=s294-w294-h220-k-no" alt="Shri Guru Gobind Singh Ji Museum">
+                <h3>Shri Guru Gobind Singh Ji Museum</h3>
+                <p>Explore the legacy of Guru Gobind Singh Ji through captivating exhibits.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.astrojyoti.com/wp-content/uploads/2021/08/image_2021-08-15_163959.png" alt="Mahur">
+                <h3>Mahur</h3>
+                <p>A spiritual destination with ancient temples and serene beauty.</p>
+            </div>
+            <div class="card">
+                <img src="https://www.tourmyindia.com/states/maharashtra/images/isapur-dam1.jpg" alt="Isapur Dam">
+                <h3>Isapur Dam</h3>
+                <p>A tranquil spot for nature lovers with scenic views.</p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <h2>About Nanded</h2>
+        <p>
+            "Nanded, a city of spiritual significance, is home to the revered Hazur Sahib Gurudwara, a sacred pilgrimage site. Known for its historical forts, serene temples, and peaceful riversides, Nanded offers a perfect blend of culture, spirituality, and natural beauty. With places like Kandhar Fort and the mahur, Nanded is a must-visit destination for history lovers and spiritual seekers alike."
+        </p>
+    </div>
+
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Nanded';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

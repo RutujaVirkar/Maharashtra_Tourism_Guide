@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gondia - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero" style="background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-XzA0pP892qDVOwfd854_u5QmOBEeHcuEZQ&s') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Gondia</h1>
+            <p>Explore the untouched beauty and rich culture of Gondia, the gateway to Maharashtra.</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+
+    <!-- Attractions in Pune -->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+          
+             <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Gondia_Sunset.jpg/1280px-Gondia_Sunset.jpg" alt="Sunset Gondia">
+            <h3>Sunset Point</h3>
+            <p>Catch the beautiful sunset view at this serene location, perfect for nature lovers.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Purvanchal_Forest_Gondia.jpg" alt="Purvanchal Forest">
+            <h3>Purvanchal Forest</h3>
+            <p>Explore the lush green forests and diverse wildlife of Purvanchal for a peaceful escape.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Devpur_Caves.jpg" alt="Devpur Caves">
+            <h3>Devpur Caves</h3>
+            <p>Discover the ancient rock-cut caves and learn about Gondia’s historical roots.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO3mGX7XDA5naerWPHcKB06PAGJmR_XiVxpA&s" alt="Nagzira Wildlife Sanctuary">
+            <h3>Nagzira Wildlife Sanctuary</h3>
+            <p>A haven for wildlife enthusiasts, home to a variety of flora and fauna.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="https://redearth.in/blog/wp-content/uploads/2022/01/Chandrapura-Fort-Priya-Nanjappa.jpg" alt="Chandrapur Fort">
+            <h3>Chandrapur Fort</h3>
+            <p>A historical fort with breathtaking views and rich heritage, located near Gondia.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Rukmini_Devi_Temple.jpg" alt="Rukmini Devi Temple">
+            <h3>Rukmini Devi Temple</h3>
+            <p>A beautiful temple by the Wainganga river, offering peace and spirituality.</p>
+        </div>
+        <!-- Card 7 -->
+        <div class="card">
+            <img src="https://content.jdmagicbox.com/comp/jabalpur/e6/9999px761.x761.180602071558.s9e6/catalogue/madan-mahal-fort-sharda-nagar-jabalpur-forts-ljh4rptch4.jpg" alt="Madan Mahal Fort">
+            <h3>Madan Mahal Fort</h3>
+            <p>A historical fort offering spectacular views of Gondia and its surroundings.</p>
+        </div>
+        <!-- Card 8 -->
+        <div class="card">
+            <img src="https://content.jdmagicbox.com/comp/gondia/g3/9999p7182.7182.221128015926.y1g3/catalogue/gumdoh-lake-gondia-tourist-attraction-00xx4iwyof.jpg" alt="Gondia Lake">
+            <h3>Gondia Lake</h3>
+            <p>A serene and peaceful lake, perfect for relaxing, picnics, and boat rides.</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about">
+        <h2>About Gondia</h2>
+        <p>
+            Gondia, located in the northeastern part of Maharashtra, is known for its picturesque landscapes, historical sites, and agricultural richness. Often referred to as the "Rice Bowl of Maharashtra," it offers a blend of rural charm and natural beauty, making it a peaceful retreat for those looking to experience the real essence of Maharashtra.
+        </p>
+    </div>
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Gondia';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>

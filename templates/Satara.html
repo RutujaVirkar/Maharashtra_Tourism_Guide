@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satara - MahaExplore</title>
+    <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MahaExplore</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#section-districts">Attractions</a>
+            <a href="{{ url_for('home') }}#section-cuisine">Cuisine</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Districts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('district', name='Ahamednagar') }}">Ahamednagar</a>
+                    <a href="{{ url_for('district', name='Akola') }}">Akola</a>
+                    <a href="{{ url_for('district', name='Amaravati') }}">Amaravati</a>
+                    <a href="{{ url_for('district', name='Aurangabad') }}">Aurangabad</a>
+                    <a href="{{ url_for('district', name='Beed') }}">Beed</a>
+                    <a href="{{ url_for('district', name='Bhandara') }}">Bhandara</a>
+                    <a href="{{ url_for('district', name='Buldhana') }}">Buldhana</a>
+                    <a href="{{ url_for('district', name='Chandrapur') }}">Chandrapur</a>
+                    <a href="{{ url_for('district', name='Dhule') }}">Dhule</a>
+                    <a href="{{ url_for('district', name='Gadchiroli') }}">Gadchiroli</a>
+                    <a href="{{ url_for('district', name='Gondia') }}">Gondia</a>
+                    <a href="{{ url_for('district', name='Hingoli') }}">Hingoli</a>
+                    <a href="{{ url_for('district', name='Jalna') }}">Jalna</a>
+                    <a href="{{ url_for('district', name='Julgaon') }}">Julgaon</a>
+                    <a href="{{ url_for('district', name='Kolhapur') }}">Kolhapur</a>
+                    <a href="{{ url_for('district', name='Latur') }}">Latur</a>
+                    <a href="{{ url_for('district', name='Mumbai') }}">Mumbai</a>
+                    <a href="{{ url_for('district', name='Nagpur') }}">Nagpur</a>
+                    <a href="{{ url_for('district', name='Nanded') }}">Nanded</a>
+                    <a href="{{ url_for('district', name='Nandurbar') }}">Nandurbar</a>
+                    <a href="{{ url_for('district', name='Nashik') }}">Nashik</a>
+                    <a href="{{ url_for('district', name='Palghar') }}">Palghar</a>
+                    <a href="{{ url_for('district', name='Parbhani') }}">Parbhani</a>
+                    <a href="{{ url_for('district', name='Pune') }}">Pune</a>
+                    <a href="{{ url_for('district', name='Raigad') }}">Raigad</a>
+                    <a href="{{ url_for('district', name='Ratnagiri') }}">Ratnagiri</a>
+                    <a href="{{ url_for('district', name='Sangli') }}">Sangli</a>
+                    <a href="{{ url_for('district', name='Satara') }}">Satara</a>
+                    <a href="{{ url_for('district', name='Sindhudurga') }}">Sindhudurga</a>
+                    <a href="{{ url_for('district', name='Solapur') }}">Solapur</a>
+                    <a href="{{ url_for('district', name='Thane') }}">Thane</a>
+                    <a href="{{ url_for('district', name='Usamanabad') }}">Usamanabad</a>
+                    <a href="{{ url_for('district', name='Warda') }}">Warda</a>
+                    <a href="{{ url_for('district', name='Washim') }}">Washim</a>
+                    <a href="{{ url_for('district', name='Yavatmal') }}">Yavatmal</a>
+                </div>
+            </div>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+        
+    <!-- Hero Section ;k-->
+    <div class="hero" style="background: url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Pratapgad-Satara-Maharashtra-IMG_2308.jpg') no-repeat center center / cover;">
+        <div class="content">
+            <h1>Welcome to Satara</h1>
+            <p>A blend of history, nature, and beauty, with forts, waterfalls, and stunning landscapes.</p>
+        </div>
+        <div id="weather" class="weather">
+            Loading Weather...
+        </div>
+    </div>
+<!--attraction-->
+    <div class="attractions">
+        <h2>Must-Visit Attractions</h2>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPq_tXoHl_sRrlJ3_3sCrukC7Ol4P9AFLKNvHOF=s294-w294-h220-k-no" alt="Ajinkyatara Fort">
+                <h3>Ajinkyatara Fort</h3>
+                <p>A historic hilltop fort offering a panoramic view of Satara city and its surrounding valleys.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipMtdn_dTaV72-Svvt6khSZS-D_GB1OkUF1eQzcG=s294-w294-h220-k-no" alt="Pratapgad Fort">
+                <h3>Pratapgad Fort</h3>
+                <p>Where history meets the mountains—an iconic Maratha fort with stunning views and rich heritage.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNjLhMyAwkdW6SPpAM5zRYlD0gBAV-qtL9JE1rB=s294-w294-h220-k-no" alt="Kaas plateau">
+                <h3>Kaas plateau</h3>
+                <p>A UNESCO World Heritage Site, the 'Valley of Flowers' in full bloom is a nature lover's paradise.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn1.tripoto.com/media/filter/nl/img/2380291/Image/1709199742_thoseghar_falls_satara_1585641002.jpg.webp" alt="Thoseghar Waterfall">
+                <h3>Thoseghar Waterfall</h3>
+                <p>Majestic, high waterfalls nestled in a serene environment, perfect for a nature escape.</p>
+            </div>
+            <div class="card">
+                <img src="https://t4.ftcdn.net/jpg/02/65/42/57/360_F_265425744_u9BTOlderEHs2w2z9IfZRWHPufDL8qNt.jpg" alt="Mahabaleshwar">
+                <h3>Mahabaleshwar</h3>
+                <p>A charming hill station known for its cool climate, scenic spots, and beautiful landscapes.</p>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSLYo6TwYSW3vbtP-B5fp9mqHyAyKW_52g52RYpoGt3u3eA-Otc91TpQF5v9kUX-pQA9v9MkH9j15InWzpE5iNqLh5C_jftGv_y1SA2jRI" alt="Lodwick Point">
+                <h3>Lodwick Point</h3>
+                <p>A stunning viewpoint that offers breathtaking vistas of the valleys and hills of Mahabaleshwar.</p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <h2>About Satara</h2>
+        <p>
+            Satara, located in the heart of Maharashtra, is a scenic destination known for its historical significance and natural beauty. Surrounded by lush hills, majestic forts like Pratapgad and Ajinkyatara, and vibrant spots like the Kaas Plateau and Thoseghar Waterfall, Satara offers a perfect mix of adventure and tranquility. Whether you're exploring the rich Maratha history or enjoying the breathtaking landscapes, Satara promises an unforgettable experience.
+        </p>
+    </div>
+
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropdown = document.querySelector('.dropdown');
+            
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+        async function getWeather() {
+            const apiKey = '8f833e2f0044bcd69b9bf91641915165';
+            const city = 'Satara';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.cod === 200) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const weatherElement = document.getElementById('weather');
+                    weatherElement.innerHTML = `${temperature}°C, ${description}`;
+                } else {
+                    document.getElementById('weather').innerHTML = 'Weather data not available';
+                }
+            } catch (error) {
+                console.error("Error fetching weather data: ", error);
+                document.getElementById('weather').innerHTML = 'Error fetching weather data';
+            }
+        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');  // Changed to querySelector for class
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
+        
+
+        // Call the function to fetch weather when the page loads
+        window.onload = getWeather;
+    </script>
+</body>
+</html>
+
